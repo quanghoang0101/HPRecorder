@@ -1,0 +1,16 @@
+PODS:
+  - HPRecorder (1.0.0)
+
+DEPENDENCIES:
+  - HPRecorder (from `../HPRecorder`)
+
+EXTERNAL SOURCES:
+  HPRecorder:
+    :path: "../HPRecorder"
+
+SPEC CHECKSUMS:
+  HPRecorder: a36344d20855389a4aadaa10477e1ae2f1512ebc
+
+PODFILE CHECKSUM: af4244327433ae0f514db5dc70a00c7d78e9a0ba
+
+COCOAPODS: 1.6.1
