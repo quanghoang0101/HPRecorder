@@ -47,6 +47,7 @@ open var percentLoudness: ((_ percent: Float) -> Void)?
 
 ### Setup
 Add `import HPRecorder` in your file
+
 In `Info.plist` file of project, you MUST add `Privacy - Microphone Usage Description` key to can use microphone permission.
 
 ## Requirements
