@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Hoang" => "quanghoang0101@ayahoo.com.vn" }
   spec.ios.deployment_target = "10.0"
-  spec.watchos.deployment_target = "2.0"
+  spec.watchos.deployment_target = "4.0"
   spec.source       = { :git => "https://github.com/quanghoang0101/HPRecorder.git", :tag => "#{spec.version}" }
   spec.source_files  = "HPRecorder/**/*.{swift}"
   spec.swift_version = "5"
