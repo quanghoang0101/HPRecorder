@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HPRecorder"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A recorder audio for iOS"
   spec.description  = "A recorder audio for iOS, simple to integrate, calculated percent of loudness"
   spec.homepage     = "https://github.com/quanghoang0101/HPRecorder"
