@@ -10,13 +10,12 @@ Pod::Spec.new do |spec|
 
   spec.name         = "HPRecorder"
   spec.version      = "1.0.0"
-  spec.summary      = "A recorder audio for iOS and WatchOS"
-  spec.description  = "A recorder audio for iOS and WatchOS, simple to integrate, calculated percent of loudness"
+  spec.summary      = "A recorder audio for iOS"
+  spec.description  = "A recorder audio for iOS, simple to integrate, calculated percent of loudness"
   spec.homepage     = "https://github.com/quanghoang0101/HPRecorder"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Hoang" => "quanghoang0101@ayahoo.com.vn" }
   spec.ios.deployment_target = "10.0"
-  spec.watchos.deployment_target = "4.0"
   spec.source       = { :git => "https://github.com/quanghoang0101/HPRecorder.git", :tag => "#{spec.version}" }
   spec.source_files  = "HPRecorder/**/*.{swift}"
   spec.swift_version = "5"

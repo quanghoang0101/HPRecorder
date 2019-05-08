@@ -72,12 +72,8 @@ public class HPRecorder: NSObject {
         }
 
         do {
-            #if os(iOS)
             try session.setCategory(.playAndRecord, mode: .spokenAudio, options: [])
             try session.setPreferredInput(self.audioInput)
-            #else
-            try session.setCategory(.playAndRecord, mode: .default, options: [])
-            #endif
             try self.session.setActive(true)
         } catch {
             print("Couldn't set Audio session category")

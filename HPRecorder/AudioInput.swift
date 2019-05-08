@@ -28,11 +28,7 @@ open class AudioInput {
         let session = AVAudioSession.sharedInstance()
         var availabeInputs: [AVAudioSessionPortDescription] = []
         do {
-            #if os(iOS)
             try session.setCategory(.playAndRecord, mode: .spokenAudio, options: [.defaultToSpeaker, .allowBluetooth])
-            #else
-            try session.setCategory(.playAndRecord, mode: .default, options: [])
-            #endif
             availabeInputs = session.availableInputs ?? []
         } catch {
             print("Couldn't set Audio session category")
