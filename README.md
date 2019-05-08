@@ -42,7 +42,19 @@ open var recorderOccurError: ((_ recocorder: AVAudioRecorder, _ error: Error) ->
 // Percent of loudness
 open var percentLoudness: ((_ percent: Float) -> Void)?
 ```
-
+## Actions
+```Swift
+// Ask permssion to record audio
+public func askPermission(completion: ((_ allowed: Bool) -> Void)?)
+// Start recording
+public func startRecording()
+// End recording
+public func endRecording()
+// Pause recorinding
+public func pauseRecording()
+// Resume recording
+public func resumeRecording()
+```
 ## Usage
 
 ### Setup
