@@ -54,6 +54,7 @@ public class HPRecorder: NSObject {
         self.audioInput = AudioInput().defaultAudioInput()
     }
 
+    // Ask permssion to record audio
     public func askPermission(completion: ((_ allowed: Bool) -> Void)?) {
         if session.responds(to: #selector(AVAudioSession.requestRecordPermission(_:))) {
             session.requestRecordPermission({(granted: Bool) -> Void in
@@ -69,6 +70,7 @@ public class HPRecorder: NSObject {
         return paths[0]
     }
 
+    // Start recording
     public func startRecording() {
 
         if self.audioFilename == nil {
@@ -98,6 +100,7 @@ public class HPRecorder: NSObject {
         }
     }
 
+    // End recording
     public func endRecording() {
         audioRecorder?.stop()
         audioRecorder = nil
@@ -106,6 +109,7 @@ public class HPRecorder: NSObject {
         self.levelTimer.invalidate()
     }
 
+    // Pause recorinding
     public func pauseRecording() {
         if audioRecorder.isRecording {
             audioRecorder.pause()
@@ -113,6 +117,7 @@ public class HPRecorder: NSObject {
         }
     }
 
+    // Resume recording
     public func resumeRecording() {
         if !audioRecorder.isRecording {
             audioRecorder.record()
