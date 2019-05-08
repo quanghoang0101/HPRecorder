@@ -19,5 +19,6 @@ Pod::Spec.new do |spec|
   spec.watchos.deployment_target = "2.0"
   spec.source       = { :git => "https://github.com/quanghoang0101/HPRecorder.git", :tag => "#{spec.version}" }
   spec.source_files  = "HPRecorder/**/*.{swift}"
+  spec.swift_version = "5"
 
 end
