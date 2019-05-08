@@ -1,0 +1,14 @@
+language: swift
+
+osx_image: xcode10.2
+
+before_install:
+- pod update
+
+script:
+  - xcodebuild test -enableCodeCoverage YES -scheme HPRecorder -workspace HPRecorder.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2'
+
+after_success:
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -t 77e9dbdd-d098-4b16-86c3-63b0c9d67236 -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
+

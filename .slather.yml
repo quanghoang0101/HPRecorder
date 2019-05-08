@@ -1,0 +1,5 @@
+coverage_service: cobertura_xml
+workspace: HPRecorder.xcworkspace
+xcodeproj: HPRecorder.xcodeproj
+scheme: HPRecorder
+output_directory: reports

@@ -15,16 +15,20 @@ public class HPRecorder: NSObject {
     open var audioRecorder: AVAudioRecorder!
 
     private var levelTimer = Timer()
+    // Time interval to get percent of loudness
     open var timeInterVal: TimeInterval = 0.3
+    // File name of audio
+    open var audioFilename: URL!
+    // Audio input: default speaker, bluetooth
+    open var audioInput: AVAudioSessionPortDescription!
 
     private var isRecording = false
 
-    open var audioFilename: URL!
-    open var audioInput: AVAudioSessionPortDescription!
-
-    // Callback
+    // Recorder did finish
     open var recorderDidFinish: ((_ recocorder: AVAudioRecorder, _ url: URL, _  success: Bool) -> Void)?
+    // Recorder occur error
     open var recorderOccurError: ((_ recocorder: AVAudioRecorder, _ error: Error) -> Void)?
+    // Percent of loudness
     open var percentLoudness: ((_ percent: Float) -> Void)?
 
     open lazy var settings: [String : Any] = {
